@@ -5,7 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { config } from 'dotenv';
 
 config()
-
+console.log(process.env.MONGODB_DATABASE_URI)
 @Module({
   imports: [
     MongooseModule.forRoot(process.env.MONGODB_DATABASE_URI)
